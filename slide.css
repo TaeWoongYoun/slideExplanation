@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.window{
+    width: 1000px;
+    height: 300px;
+}
+
+.slide{
+    /* 하위 속성의 크기는 window에 맞춰서 1000px로 정해질거라 
+    1000px크기의 박스 3개를 감싸기 위해 3000px로 설정*/
+    width: 3000px;
+    /* 높이는 항상 같으니 고정 */
+    height: 300px;
+    /* 우리는 left라는 속성으로 애니메이션을 움직일거라 position을 걸어줌 */
+    position: relative;
+    /* 하위 속성들이 세로로 정렬된걸 가로로 정렬시킴 */
+    display: flex;
+    /* 순서대로 읽겠음. 
+    animation : 애니메이션 기능 설정하겠음
+    10s : slide가 움직이는 시간인데 맘대로 설정하면 됨
+    infinite :  말 그대로 무한. 계속 움직이는 슬라이드 하겠습니다. 라는 의미
+    linear : 자연스럽게 움직일거임
+    slide : 그냥 이 다음에 나올 @kerframes 이름임. 맘대로 작성하세요.*/
+    animation: 10s infinite linear slide;
+}
+
+.slide div{
+    width: 1000px;
+    height: 300px;
+}
+
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+
+    23%{
+        left: 0;
+    }
+
+    33%{
+        left: -1000px;
+    }
+
+    56%{
+        left: -1000px;
+    }
+
+    66%{
+        left: -2000px;
+    }
+
+    90%{
+        left: -2000px;
+    }
+
+    100%{
+        left: -3000px;
+    }
+}
